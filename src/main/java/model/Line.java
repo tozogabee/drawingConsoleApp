@@ -11,7 +11,8 @@
 
 package model;
 
-import com.thangbui.consoledrawing.util.Utils;
+
+import utils.Util;
 
 public class Line implements Entity {
 
@@ -24,7 +25,7 @@ public class Line implements Entity {
         if (_x1 != _x2 && _y1 != _y2) {
             throw new IllegalArgumentException("Draw line does not support diagonal line at the moment");
         }
-        Utils.shouldAllPositive(_x1, _y1, _x2, _y2);
+        Util.checkValuesArePositive(_x1, _y1, _x2, _y2);
 
         if ((x1 == x2 && y1 > y2) || (y1 == y2 && x1 > x2)) {
             this.x1 = _x2;

@@ -11,23 +11,24 @@
 
 package model;
 
-import com.thangbui.consoledrawing.command.BucketFillCommand;
-import com.thangbui.consoledrawing.command.DrawEntityCommand;
-import com.thangbui.consoledrawing.command.DrawLineCommand;
-import com.thangbui.consoledrawing.command.DrawRectangleCommand;
+
+import commands.BucketFillCommand;
+import commands.DrawEntityCommand;
+import commands.DrawLineCommand;
+import commands.DrawRectangleCommand;
 
 public class EntityFactory {
 
     public Entity getEntity(DrawEntityCommand command) {
         if (command instanceof DrawLineCommand) {
             DrawLineCommand cmd = (DrawLineCommand) command;
-            return new com.thangbui.consoledrawing.model.Line(cmd.getX1(), cmd.getY1(), cmd.getX2(), cmd.getY2());
+            return new model.Line(cmd.getX1(), cmd.getY1(), cmd.getX2(), cmd.getY2());
         } else if (command instanceof DrawRectangleCommand) {
             DrawRectangleCommand cmd = (DrawRectangleCommand) command;
             return new Rectangle(cmd.getX1(), cmd.getY1(), cmd.getX2(), cmd.getY2());
         } else if (command instanceof BucketFillCommand) {
             BucketFillCommand cmd = (BucketFillCommand) command;
-            return new BucketFill(cmd.getX(), cmd.getY(), cmd.getCharacter());
+            return new BucketFill(cmd.getX(), cmd.getY(), cmd.getC());
         }
         return null;
     }

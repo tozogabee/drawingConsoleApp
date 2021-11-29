@@ -4,7 +4,7 @@ import utils.Util;
 
 import java.util.Objects;
 
-public class BucketFill {
+public class BucketFill implements Entity {
 
     private int  x;
     private int  y;

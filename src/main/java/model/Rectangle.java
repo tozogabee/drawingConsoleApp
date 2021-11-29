@@ -11,7 +11,6 @@
 
 package model;
 
-import com.thangbui.consoledrawing.util.Utils;
 import utils.Util;
 
 public class Rectangle implements Entity {

@@ -2,7 +2,7 @@ package commands;
 
 import utils.Util;
 
-public class BucketFillCommand implements Command{
+public class BucketFillCommand implements DrawEntityCommand{
     private static final String helpMessage = "B x y c, Should fill the entire area connected to (x,y) with \"colour\" c. The behavior of this is the same as that of the \"bucket fill\" tool in paint programs.";
     private int x;
     private int y;

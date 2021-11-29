@@ -53,7 +53,7 @@ public class Main {
         }
     }
 
-    private static void Ldraw(DrawEntityCommand command) {
+    private static void draw(DrawEntityCommand command) {
         if (canvas == null) {
             System.out.println("You need to create a canvas first");
             return;

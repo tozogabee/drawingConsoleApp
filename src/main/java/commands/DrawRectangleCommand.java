@@ -2,7 +2,7 @@ package commands;
 
 import utils.Util;
 
-public class DrawRectangleCommand implements Command{
+public class DrawRectangleCommand implements DrawEntityCommand{
 
     private static final String helpMessage = "R x1 y1 x2 y2  Should create a new rectangle, whose upper left corner is (x1,y1) and lower right corner is (x2,y2). Horizontal and vertical lines will be drawn using the 'x' character.";
     private int x1;

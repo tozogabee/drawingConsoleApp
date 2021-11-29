@@ -16,8 +16,8 @@ public class Util {
         Arrays.stream(params)
                 .forEach(
                         param -> {
-                            if(param < 1) {
-                                throw new IllegalArgumentException();
+                            if(param < 0) {
+                                throw new IllegalArgumentException("Number must be greater than 0, the param value is ");
                             }
                         }
                 );
